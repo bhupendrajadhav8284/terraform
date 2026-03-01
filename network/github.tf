@@ -1,14 +1,19 @@
-terraform {
-  required_providers {
-    github = {
-      source  = "integrations/github"
-      version = "~> 6.0"
-    }
-  }
-}
+# variable "github_token" {
+#   type      = string
+#   sensitive = true
+# }
 
 # Configure the GitHub Provider
 provider "github" {
-    token = 
+    token = var.github_token
+
 }
+
+resource "github_repository" "demo" {
+    name        = "demo"
+    description = "My awesome repository"
+    visibility = "private"  # or "public"
+}
+
+
 

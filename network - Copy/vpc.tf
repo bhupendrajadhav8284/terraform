@@ -107,7 +107,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow_http" {
 #   key_name   = "my-terraform-key"  # Unique name for the key pair
 #   public_key = tls_private_key.ec2_key.public_key_openssh
 #   depends_on = [tls_private_key.ec2_key]
-
+  
 # }
 
 resource "aws_instance" "ec2_server" {

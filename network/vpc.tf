@@ -1,3 +1,4 @@
+/*
 resource "aws_vpc" "main" {
   cidr_block       = var.vpc_cidr
   instance_tenancy = "default"
@@ -125,3 +126,4 @@ resource "aws_instance" "ec2_server" {
     Name = "terraform_ec2"
   }
 }
+*/
